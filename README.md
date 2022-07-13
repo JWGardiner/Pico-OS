@@ -53,3 +53,4 @@ Releases will be in the releases tab along with instructions on how to install i
 
 Support me on Ko-Fi with the link on the right or the link below!
 
+https://ko-fi.com/JWGardiner
