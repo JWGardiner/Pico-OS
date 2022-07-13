@@ -5,16 +5,18 @@ This allows you to interact with the hardware in a much easier way, and requires
 
 The structure is simple:
 
-- bin
-- usr
-- Startup
-- main.py
+- `bin` 
+- `usr`
+- `startup` 
+- `main.py` 
 
 main.py is the main part of the OS.
 
 bin is all of the installed programs.
 
 usr is for configuration.
+
+files in startup are run just after it's finished init.
 
 Upon starting, it will generate these files.
 
@@ -33,12 +35,21 @@ By default the only commands you can use are:
 
 # Usage
 
-Files in startup are ran just before the cli starts, which is useful for doing stuff early on.
+Files in `startup` are ran just before the cli starts, which is useful for doing stuff early on.
 
-Files in bin are run when you type the name of the command in the cli.
+Files in `bin` are run when you type the name of the command in the cli.
 
-Files in usr are for configuration.
+Files in `usr` are for configuration.
+
+# Installation
+
+The program is unfinished and as such you cannot install it yet.
+
+**PLEASE DO NOT MAKE BUG REPORTS ABOUT THIS**
+
+Releases will be in the releases tab along with instructions on how to install it. Different versions could vary slightly
 
 # Support
 
-WIP
+Support me on Ko-Fi with the link on the right or the link below!
+
