@@ -25,7 +25,8 @@ Once you boot it up for the first time, you are greeted by a CLI interface; you 
 
 By default the only commands you can use are:
 
-- `pkg`
+- `pkg-rm`
+- `pkg-add`
 - `net-connect`
 - `net-disconnect`
 
