@@ -20,18 +20,12 @@ files in startup are run just after it's finished init.
 
 Upon starting, it will generate these files.
 
-Once you boot it up for the first time, you are greeted by a CLI interface; you can access any commands in /bin and to keep the OS lightweight on the limiting hardware; only a few things are installed.
-
-- Package Manager (WIP)
-- Network Tools
+Once you boot it up for the first time, you are greeted by a CLI interface; you can access any commands in /bin and to keep the OS lightweight on the limiting hardware; only a package manager is installed
 
 By default the only commands you can use are:
 
 - `pkg-rm`
 - `pkg-add`
-- `net-connect`
-- `net-disconnect`
-
 
 # Usage
 
