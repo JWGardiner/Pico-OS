@@ -12,19 +12,13 @@ def setup():
         print("/bin already exists")
     try:
         os.mkdir("usr")
-    except OSError:
-        print("/usr already exists")
-    finally:
         try:
-            f = open("usr/user.cfg", "w")
-            fileSize = os.stat("usr/user.cfg")[6]
-            if fileSize <= 0 and f.read() != "default":
-                f.write("default")
-                f.close()
-            else:
-                print("/usr/user.cfg already exists")
+            file = open('usr/user.cfg', 'w')
+            f.close()
         except OSError:
             print("/usr/user.cfg already exists")
+    except OSError:
+        print("/usr already exists")        
     try:
         os.mkdir("startup")
     except OSError:
@@ -69,3 +63,4 @@ setup()
 startup()
 print("\nPico OS v"+system.ver)
 cli()
+
