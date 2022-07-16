@@ -20,7 +20,7 @@ files in startup are run just after it's finished init.
 
 Upon starting, it will generate these files.
 
-Once you boot it up for the first time, you are greeted by a CLI interface; you can access any commands in /bin and to keep the OS lightweight on the limiting hardware; nothing is pre-installed.
+Once you boot it up for the first time, you are greeted by a CLI interface; you can access any commands in /bin and to keep the OS lightweight on the limiting hardware; nothing is pre-installed. The only command you can use by default is `ls-cmd` which just lists all of the files in `/bin`
 
 # Usage
 
