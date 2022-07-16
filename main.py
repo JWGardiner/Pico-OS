@@ -18,7 +18,7 @@ def setup():
         try:
             f = open("usr/user.cfg", "w")
             fileSize = os.stat("usr/user.cfg")[6]
-            if fileSize == 0:
+            if fileSize <= 0 and f.read() != "default":
                 f.write("default")
                 f.close()
             else:
@@ -54,7 +54,14 @@ def cli():
     try:
         exec(open("bin/"+command).read())
     except OSError:
-        print("Couldn't find command \""+command+"\"")
+        if command == "ls-cmd":
+            try:
+                print(os.listdir("bin/"))
+            except OSError:
+                print("Unable to access /bin to retrieve commands.")
+        else:
+            print("Couldn't find command \""+command+"\"")
+        
     cli()
     
 #Start the OS
