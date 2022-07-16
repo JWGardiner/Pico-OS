@@ -2,8 +2,6 @@ import machine
 import network
 import os
 
-
-
 #Setup - Create all the directories, folders etc that are required for normal function
 def setup():
     led = machine.Pin("LED", machine.Pin.OUT)
@@ -27,36 +25,6 @@ def setup():
                 print("/usr/user.cfg already exists")
         except OSError:
             print("/usr/user.cfg already exists")
-            
-        try:
-            os.mkdir("usr/net")
-        except OSError:
-            print("/usr/net already exists")
-        finally:
-            try:
-                f = open("usr/net/ssid.cfg", "w")
-                f.close()
-                fileSize = os.stat("usr/net/ssid.cfg")[6]
-                if fileSize == 0:
-                    f = open("usr/net/ssid.cfg", "w")
-                    f.write("None")
-                    f.close()
-                else:
-                    print("/usr/net/ssid.cfg already exists")
-            except OSError:
-                print("/usr/net/ssid.cfg already exists")    
-            try:
-                f = open("usr/net/pass.cfg", "w")
-                f.close()
-                fileSize = os.stat("usr/net/pass.cfg")[6]
-                if fileSize == 0:
-                    f = open("usr/net/pass.cfg", "w")
-                    f.write("None")
-                    f.close()
-                else:
-                    print("/usr/net/pass.cfg already exists")
-            except OSError:
-                print("/usr/net/pass.cfg already exists")
     try:
         os.mkdir("startup")
     except OSError:
@@ -72,7 +40,6 @@ class system:
     username = name
     ver = "0.0.1"
 
-
 #Startup code - Runs all the files in the /startup directory.
 def startup():
     for file in os.listdir("startup"):
@@ -80,6 +47,7 @@ def startup():
             exec(open("startup/"+file).read())
         except OSError:
             print("A startup program encountered an error: \""+file+"\"")
+
 #Command line interface
 def cli():
     command = input(name+" $: ")
